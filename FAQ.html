@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: large;
+  transition: 0.4s;
+  border-bottom: 2.5px solid #D9D9D9;
+  width: 70%;
+  font-weight: bold;
+
+}
+
+.active, .accordion:hover {
+  background-color: #1378D4;
+  color: white;
+  
+
+
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #1378D4;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+  color: white;
+}
+
+.panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  color: #858181;
+  width: 65%;
+
+}
+
+.paragraphWithVertcalLine {
+            border-left: 3px solid #1378D4;
+            padding-left: 7px;
+            margin-left : 40px;
+            display: inline-block;
+         
+        }
+</style>
+</head>
+<body>
+
+<button class="accordion">How do I spot and avoid Vishing attempts?</button>
+<div class="panel ">
+        <p class="paragraphWithVertcalLine">Vishing is a combination of "voice" and "Phishing". If you're not familiar with Phishing, please check out this article to learn more. In an event of a Vishing attempt, a scammer may reach out to you via phone call. They will try to use social engineering to obtain your personal information and financial details. 
+            <a href="http://link">Read more</a> </p> 
+</div>
+
+<button class="accordion">How  do I save and send e-mails as .msg or .eml files?</button>
+<div class="panel">
+  <p class="paragraphWithVertcalLine">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">What is Personally Identifiable Information (PII)?</button>
+<div class="panel">
+  <p class="paragraphWithVertcalLine">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
